@@ -1,0 +1,195 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frinder</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+</head>
+<body>
+
+    <div class ="container">
+    <h2><strong>Survey Questions</strong></h2>
+    <hr>
+    <h3><strong>About You</strong></h3>
+    <h4>Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required>
+
+    <h4>Photo (Required)</h4>
+    <input type="text" id="photo" class="form-control" required>
+    <br>
+    <br>
+
+    <h4><strong>Question 1</strong></h4>
+    <h5>Cheetos are a staple in your diet.</h5>
+    <select id="q1" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 2</strong></h4>
+    <h5>You enjoy taking naps.</h5>
+    <select id="q2" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 3</strong></h4>
+    <h5>You want to travel the world.</h5>
+    <select id="q3" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 4</strong></h4>
+    <h5>You are open to trying new things.</h5>
+    <select id="q4" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 5</strong></h4>
+    <h5>Exercise is important to you.</h5>
+    <select id="q5" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 6</strong></h4>
+    <h5>You are outgoing and sociable.</h5>
+    <select id="q6" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 7</strong></h4>
+    <h5>You are financially responsible.</h5>
+    <select id="q7" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 8</strong></h4>
+    <h5>You prefer to stay in rather than go out.</h5>
+    <select id="q8" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 9</strong></h4>
+    <h5>You have a good sense of humor.</h5>
+    <select id="q9" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <h4><strong>Question 10</strong></h4>
+    <h5>You like dogs.</h5>
+    <select id="q10" class="choices">
+      <option value=""></option>
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <br><br>
+    <button type="submit" class="btn btn-primary" id="submitSurvey">Submit</button>
+    </div>
+<hr>
+
+<div class="container">
+  <div class="row">
+      <a href="/api/friends" class="card-link">API Friends List</a> 
+  </div>
+</div>
+
+
+    <!-- MODAL -->
+    <div id=resultsModal class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your Match!:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="matchName"></p>
+            <img id="matchPhoto"></img>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+$("#submitSurvey").on("click", function(event) {
+    event.preventDefault();
+    //check if form has been completed; if so
+    if ($("#name").val() !== "" && $("#photo").val() !== "" && $("#q1").val() !== "" && $("#q2").val() !== "" && $("#q3").val() !== "" && $("#q4").val() !== "" && $("#q5").val() !== "" && $("#q6").val() !== "" && $("#q7").val() !== "" && $("#q8").val() !== "" && $("#q9").val() !== "" && $("#q10").val() !== "") {
+      //store user inputs in object
+      var newFriend = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          answers: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+      };
+      console.log(newFriend);
+      //send object to friends api
+      $.post("/api/friends", newFriend, function(data) {
+              console.log(data);
+              console.log("Added new friend");
+              //display matched info in modal
+              $("#matchName").text(data.name);
+              $("#matchPhoto").attr("src", data.photo);
+        });
+        $("#resultsModal").modal("show");
+      //if form is not completed, alert user
+      } else {
+        alert("Please fill out all fields before submitting!");
+      }
+});
+});
+
+</script>
+
+
+</body>
+</html>
